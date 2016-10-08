@@ -4,6 +4,7 @@
     const bodyParser = require('body-parser')
     const request = require('request')
     const app = express()
+    const token = process.env.FB_PAGE_ACCESS_TOKEN
 
     app.set('port', (process.env.PORT || 5000))
 
@@ -53,7 +54,6 @@
     res.sendStatus(200)
 	})
 
-const token = process.env.FB_PAGE_ACCESS_TOKEN
 
     function sendTextMessage(sender, text) {
     let messageData = { text:text }
