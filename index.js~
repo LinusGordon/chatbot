@@ -38,6 +38,9 @@
         let sender = event.sender.id;
         if (event.message && event.message.text) {
             let text = event.message.text;
+	    if(text.toLower() == "what is your name?") {
+		sendTextMessage(sender, "Chatbot, built by Linus");
+	    }
             sendTextMessage(sender, "Echo: " + text.substring(0, 200));
         }
     }
