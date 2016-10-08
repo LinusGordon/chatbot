@@ -39,7 +39,7 @@
         if (event.message && event.message.text) {
             let text = event.message.text;
             sendTextMessage(sender, text.substring(0, 200));
-	    sendTextMessage(sender, "Loading...");
+	    setTimeout(sendTextMessage(sender, "Loading...", 1000);
         }
     }
     res.sendStatus(200);
